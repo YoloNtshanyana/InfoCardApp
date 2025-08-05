@@ -9,11 +9,12 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View>
       <ScrollView>
+
+      <Image source={require('./assets/profile.png')} style={styles.image} />
+      
         <Text style={styles.header}>My Info Card</Text>
       </ScrollView>
-      </View>
     </SafeAreaView>
   );
 }
