@@ -1,12 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, ScrollView, TextInput, Image, Button } from 'react-native';
+import { useState } from 'react'
 
 export default function App() {
+  const [name, setName] = useState('')
+  const [hobby, setHobby] = useState('')
+  const [message, setMessage] = useState('Welcome to my app')
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+      <ScrollView>
+        <Text style={styles.header}>My Info Card</Text>
+      </ScrollView>
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -18,3 +26,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
